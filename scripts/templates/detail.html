@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+﻿{% extends "base.html" %}
 
 {% block title %}{{ item.HOUSE_NM }} 청약 일정 분양가 {{ item.SUBSCRPT_AREA_CODE_NM }} {{ year }} | aptpass{% endblock %}
 {% block description %}{{ item.HOUSE_NM }} 청약일정, 분양가, 특별공급 현황을 확인하세요. {{ item.HSSPLY_ADRES }} {{ item.TOT_SUPLY_HSHLDCO }}세대. 분양가 {{ min_price }}~{{ max_price }}.{% endblock %}
@@ -26,7 +26,7 @@
 {% block content %}
   <!-- 상단 광고 -->
   <div class="container">
-    <div class="ad-banner ad-top">광고 (728×90 / 모바일 320×50)</div>
+    <div class="ad-banner ad-top"></div>
   </div>
 
   <!-- 히어로 -->
@@ -253,7 +253,7 @@
         {% endif %}
 
         <!-- 중간 광고 -->
-        <div class="ad-banner ad-mid">광고 (728×90 / 모바일 320×50)</div>
+        <div class="ad-banner ad-mid"></div>
 
         <!-- ⑤ 지도 -->
         <div class="detail-card">
@@ -286,7 +286,7 @@
         </div>
 
         <!-- 광고 (체크리스트 위) -->
-        <div class="ad-banner ad-mid">광고 (728×90 / 모바일 320×50)</div>
+        <div class="ad-banner ad-mid"></div>
 
         <!-- ⑦ 청약 자격 체크리스트 -->
         <div class="detail-card">
@@ -383,7 +383,7 @@
             </a>
           </div>
 
-          <div class="ad-banner ad-side">광고 (300×600)</div>
+          <div class="ad-banner ad-side"></div>
 
         </div>
       </div>

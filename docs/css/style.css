@@ -110,25 +110,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   padding: 4px;
 }
 
-/* ── Ad Placeholder ────────────────────────────── */
-.ad-banner {
-  background: var(--card-bg);
-  border: 1px dashed var(--border);
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-muted);
-  font-size: .8rem;
-}
-.ad-top    { width: 100%; height: 90px; margin: 12px 0; }
-.ad-mid    { width: 100%; height: 90px; margin: 24px 0; }
-.ad-side   { width: 300px; height: 600px; flex-shrink: 0; }
-@media (max-width: 768px) {
-  .ad-top  { height: 50px; }
-  .ad-mid  { height: 50px; }
-  .ad-side { width: 100%; height: 50px; }
-}
+/* ── Ad ────────────────────────────── */
+.ad-banner { display: block; }
+.ad-banner:empty { display: none; }
+.ad-top  { width: 100%; margin: 12px 0; }
+.ad-mid  { width: 100%; margin: 24px 0; }
+.ad-side { width: 300px; flex-shrink: 0; }
 
 /* ── Hero ───────────────────────────────────────── */
 .hero {

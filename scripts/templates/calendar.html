@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+﻿{% extends "base.html" %}
 
 {% block title %}{{ year }}년 청약 캘린더 — 월별 일정 | aptpass{% endblock %}
 {% block description %}{{ year }}년 전국 아파트 청약 월별 캘린더. 특별공급, 1순위, 당첨 발표 일정을 한눈에 확인하세요.{% endblock %}
@@ -12,7 +12,7 @@
   <div class="section-title" style="margin-bottom:8px;">📅 청약 캘린더</div>
   <p style="color:var(--text-secondary); font-size:.88rem; margin-bottom:20px;">{{ today_str }} 기준. 계약 종료일까지 진행 중인 단지만 표시됩니다.</p>
 
-  <div class="ad-banner ad-mid" style="margin-bottom:24px;">광고 (728×90 / 모바일 320×50)</div>
+  <div class="ad-banner ad-mid" style="margin-bottom:24px;"></div>
 
   <!-- 월 선택 -->
   <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px;" id="month-btns"></div>
@@ -78,7 +78,7 @@
     </div>
   </div>
 
-  <div class="ad-banner ad-mid" style="margin-top:32px;">광고 (728×90 / 모바일 320×50)</div>
+  <div class="ad-banner ad-mid" style="margin-top:32px;"></div>
 
 </div>
 {% endblock %}

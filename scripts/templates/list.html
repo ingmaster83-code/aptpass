@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+﻿{% extends "base.html" %}
 
 {% block title %}{{ year }}년 청약 목록 전체 — 분양가 일정 | aptpass{% endblock %}
 {% block description %}{{ year }}년 전국 아파트 청약 전체 목록. 분양가, 청약 일정, 특별공급 세대수를 지역·날짜별로 확인하세요.{% endblock %}
@@ -13,7 +13,7 @@
     <p style="color:var(--text-secondary); font-size:.88rem; margin-bottom:20px;">계약 종료일 기준 현재 진행 중인 청약만 표시됩니다. {{ today_str }} 기준.</p>
 
     <!-- 광고 -->
-    <div class="ad-banner ad-mid" style="margin-bottom:24px;">광고 (728×90 / 모바일 320×50)</div>
+    <div class="ad-banner ad-mid" style="margin-bottom:24px;"></div>
 
     <!-- 필터 -->
     <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px;">
@@ -97,7 +97,7 @@
     {% endif %}
 
     <!-- 광고 -->
-    <div class="ad-banner ad-mid" style="margin-top:32px;">광고 (728×90 / 모바일 320×50)</div>
+    <div class="ad-banner ad-mid" style="margin-top:32px;"></div>
 
   </div>
 {% endblock %}

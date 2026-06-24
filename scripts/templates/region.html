@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+﻿{% extends "base.html" %}
 
 {% block title %}{{ region }} 청약 목록 {{ year }} — 분양가 일정 | aptpass{% endblock %}
 {% block description %}{{ region }} 아파트 청약 목록. 분양가, 청약 일정, 당첨가점을 확인하세요.{% endblock %}
@@ -18,7 +18,7 @@
     <h1 style="font-size:1.4rem; font-weight:700; margin-bottom:8px;">{{ region }} 청약 목록</h1>
     <p style="color:var(--text-secondary); font-size:.88rem; margin-bottom:20px;">{{ today_str }} 기준 · {{ items | length }}건</p>
 
-    <div class="ad-banner ad-mid" style="margin-bottom:24px;">광고 (728×90 / 모바일 320×50)</div>
+    <div class="ad-banner ad-mid" style="margin-bottom:24px;"></div>
 
     {% if items %}
     <div class="card-grid">
@@ -64,7 +64,7 @@
     </div>
     {% endif %}
 
-    <div class="ad-banner ad-mid" style="margin-top:32px;">광고 (728×90 / 모바일 320×50)</div>
+    <div class="ad-banner ad-mid" style="margin-top:32px;"></div>
 
   </div>
 {% endblock %}
