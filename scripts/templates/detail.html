@@ -351,7 +351,7 @@
           <div class="detail-card" style="margin-bottom:0;">
             <div style="text-align:center; margin-bottom:14px;">
               <div style="font-size:.82rem; color:var(--text-muted); margin-bottom:4px;">1순위 청약까지</div>
-              <div style="font-size:2.5rem; font-weight:700; color:var(--{% if dday.cls == 'red' %}danger{% elif dday.cls == 'green' %}success{% elif dday.cls == 'orange' %}warning{% else %}primary{% endif %}); line-height:1;">{{ dday.label }}</div>
+              <div style="font-size:2.5rem; font-weight:700; color:var(--{% if dday.cls == 'red' %}danger{% elif dday.cls == 'green' %}success{% elif dday.cls == 'orange' %}warning{% else %}primary{% endif %}); line-height:1.2; margin-bottom:6px;">{{ dday.label }}</div>
               <div style="font-size:.82rem; color:var(--text-secondary);">{{ item.GNRL_RNK1_CRSPAREA_RCPTDE | fmt_date }}</div>
             </div>
             <div style="display:flex; flex-direction:column; gap:8px; font-size:.85rem;">
