@@ -470,19 +470,15 @@ window.addEventListener('load', function () {
       var container = document.getElementById('kakao-map');
       var map = new kakao.maps.Map(container, { center: new kakao.maps.LatLng(37.5665, 126.9780), level: 4 });
       var gc = new kakao.maps.services.Geocoder();
-      gc.addressSearch(addr, function (result, status) {
-        if (status !== kakao.maps.services.Status.OK) return;
-        var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
-        map.setCenter(coords);
-        /* 단지 마커 */
-        new kakao.maps.Marker({ map: map, position: coords, title: name });
 
-        /* 주변 시설 검색 */
+      function searchNearby(coords) {
+        new kakao.maps.Marker({ map: map, position: coords, title: name });
+        map.setCenter(coords);
         var ps = new kakao.maps.services.Places();
         var cats = [
-          { code: 'SC4', label: '학교',   color: '#16A34A' },
-          { code: 'SW8', label: '지하철', color: '#2563EB' },
-          { code: 'HP8', label: '병원',   color: '#DC2626' },
+          { code: 'SC4', color: '#16A34A' },
+          { code: 'SW8', color: '#2563EB' },
+          { code: 'CS2', color: '#EA580C' },
         ];
         cats.forEach(function (cat) {
           ps.categorySearch(cat.code, function (data, st) {
@@ -490,14 +486,32 @@ window.addEventListener('load', function () {
             data.forEach(function (place) {
               var pos = new kakao.maps.LatLng(place.y, place.x);
               var marker = new kakao.maps.Marker({ map: map, position: pos, title: place.place_name });
-              var overlay = new kakao.maps.CustomOverlay({
-                map: map, position: pos, yAnchor: 2.2,
-                content: '<span style="background:' + cat.color + ';color:#fff;font-size:10px;padding:2px 5px;border-radius:3px;white-space:nowrap;">' + place.place_name + '</span>'
+              var ov = new kakao.maps.CustomOverlay({
+                map: null, position: pos, yAnchor: 2.4,
+                content: '<span style="background:' + cat.color + ';color:#fff;font-size:10px;padding:2px 6px;border-radius:3px;white-space:nowrap;pointer-events:none;">' + place.place_name + '</span>'
               });
-              marker.addListener('click', function () { overlay.setMap(overlay.getMap() ? null : map); });
+              marker.addListener('mouseover', function () { ov.setMap(map); });
+              marker.addListener('mouseout',  function () { ov.setMap(null); });
             });
           }, { location: coords, radius: 1000 });
         });
+      }
+
+      /* 주소 → 좌표 변환 (괄호 포함 주소는 앞부분만 사용) */
+      var cleanAddr = addr.replace(/\s*\(.*/, '').trim();
+      gc.addressSearch(cleanAddr, function (result, status) {
+        if (status === kakao.maps.services.Status.OK) {
+          searchNearby(new kakao.maps.LatLng(result[0].y, result[0].x));
+        } else {
+          /* 마지막 단어(지구명 등) 제거 후 재시도 */
+          var parts = cleanAddr.split(' ');
+          var shortAddr = parts.slice(0, Math.max(2, parts.length - 1)).join(' ');
+          gc.addressSearch(shortAddr, function (r2, s2) {
+            if (s2 === kakao.maps.services.Status.OK) {
+              searchNearby(new kakao.maps.LatLng(r2[0].y, r2[0].x));
+            }
+          });
+        }
       });
     });
   };
