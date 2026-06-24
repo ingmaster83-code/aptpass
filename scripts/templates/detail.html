@@ -5,6 +5,7 @@
 {% block og_title %}{{ item.HOUSE_NM }} 청약 정보 | aptpass{% endblock %}
 {% block og_desc %}{{ item.SUBSCRPT_AREA_CODE_NM }} {{ item.TOT_SUPLY_HSHLDCO }}세대 | 분양가 {{ min_price }}~{{ max_price }}{% endblock %}
 {% block canonical %}https://aptpass.kr/apt/{{ slug }}.html{% endblock %}
+{% block body_attrs %}data-lawd-cd="{{ lawd_cd }}"{% endblock %}
 
 {% block extra_head %}
 <script type="application/ld+json">
@@ -416,12 +417,36 @@ window.addEventListener('load', function () {
         if (status !== kakao.maps.services.Status.OK) return;
         var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
         map.setCenter(coords);
+        /* 단지 마커 */
         new kakao.maps.Marker({ map: map, position: coords, title: name });
+
+        /* 주변 시설 검색 */
+        var ps = new kakao.maps.services.Places();
+        var cats = [
+          { code: 'SC4', label: '학교',   color: '#16A34A' },
+          { code: 'SW8', label: '지하철', color: '#2563EB' },
+          { code: 'HP8', label: '병원',   color: '#DC2626' },
+        ];
+        cats.forEach(function (cat) {
+          ps.categorySearch(cat.code, function (data, st) {
+            if (st !== kakao.maps.services.Status.OK) return;
+            data.forEach(function (place) {
+              var pos = new kakao.maps.LatLng(place.y, place.x);
+              var marker = new kakao.maps.Marker({ map: map, position: pos, title: place.place_name });
+              var overlay = new kakao.maps.CustomOverlay({
+                map: map, position: pos, yAnchor: 2.2,
+                content: '<span style="background:' + cat.color + ';color:#fff;font-size:10px;padding:2px 5px;border-radius:3px;white-space:nowrap;">' + place.place_name + '</span>'
+              });
+              marker.addListener('click', function () { overlay.setMap(overlay.getMap() ? null : map); });
+            });
+          }, { location: coords, radius: 1000 });
+        });
       });
     });
   };
   document.head.appendChild(s);
 });
 </script>
+<script>window.__TRADE_DATA__ = {{ trade_rows | tojson }};</script>
 <script src="/js/realtime.js" defer></script>
 {% endblock %}

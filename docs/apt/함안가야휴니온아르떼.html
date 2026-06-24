@@ -33,7 +33,7 @@
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
 </head>
-<body>
+<body data-lawd-cd="48720">
   <header class="site-header">
     <div class="container">
       <a href="/" class="logo">apt<span>pass</span></a>
@@ -448,13 +448,37 @@ window.addEventListener('load', function () {
         if (status !== kakao.maps.services.Status.OK) return;
         var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
         map.setCenter(coords);
+        /* 단지 마커 */
         new kakao.maps.Marker({ map: map, position: coords, title: name });
+
+        /* 주변 시설 검색 */
+        var ps = new kakao.maps.services.Places();
+        var cats = [
+          { code: 'SC4', label: '학교',   color: '#16A34A' },
+          { code: 'SW8', label: '지하철', color: '#2563EB' },
+          { code: 'HP8', label: '병원',   color: '#DC2626' },
+        ];
+        cats.forEach(function (cat) {
+          ps.categorySearch(cat.code, function (data, st) {
+            if (st !== kakao.maps.services.Status.OK) return;
+            data.forEach(function (place) {
+              var pos = new kakao.maps.LatLng(place.y, place.x);
+              var marker = new kakao.maps.Marker({ map: map, position: pos, title: place.place_name });
+              var overlay = new kakao.maps.CustomOverlay({
+                map: map, position: pos, yAnchor: 2.2,
+                content: '<span style="background:' + cat.color + ';color:#fff;font-size:10px;padding:2px 5px;border-radius:3px;white-space:nowrap;">' + place.place_name + '</span>'
+              });
+              marker.addListener('click', function () { overlay.setMap(overlay.getMap() ? null : map); });
+            });
+          }, { location: coords, radius: 1000 });
+        });
       });
     });
   };
   document.head.appendChild(s);
 });
 </script>
+<script>window.__TRADE_DATA__ = [{"aptDong": "\uc81c1\ub3d9", "aptNm": "\ud61c\uc131\ubbf8\uc8fc\uc0c1\ubcf5\ud569\uc544\ud30c\ud2b8", "buildYear": 2024, "buyerGbn": "\uac1c\uc778", "cdealDay": " ", "cdealType": " ", "dealAmount": "27,800", "dealDay": 21, "dealMonth": 5, "dealYear": 2026, "dealingGbn": "\uc911\uac1c\uac70\ub798", "estateAgentSggNm": "\uacbd\ub0a8 \uc758\ub839\uad70", "excluUseAr": 84.8674, "floor": 15, "jibun": "394-15", "landLeaseholdGbn": "N", "rgstDate": "26.06.22", "sggCd": 48720, "slerGbn": "\uac1c\uc778", "umdNm": "\uc758\ub839\uc74d \uc911\ub3d9\ub9ac"}, {"aptDong": "\ube44", "aptNm": "\uc0bc\uc601\ud0c0\uc6b4", "buildYear": 1992, "buyerGbn": "\uac1c\uc778", "cdealDay": " ", "cdealType": " ", "dealAmount": "7,000", "dealDay": 20, "dealMonth": 5, "dealYear": 2026, "dealingGbn": "\uc911\uac1c\uac70\ub798", "estateAgentSggNm": "\uacbd\ub0a8 \ucc3d\uc6d0\uc2dc \uc758\ucc3d\uad6c", "excluUseAr": 59.76, "floor": 11, "jibun": "862-18", "landLeaseholdGbn": "N", "rgstDate": "26.06.05", "sggCd": 48720, "slerGbn": "\uac1c\uc778", "umdNm": "\uc758\ub839\uc74d \ub3d9\ub3d9\ub9ac"}, {"aptDong": " ", "aptNm": "\uc2e0\uc6b0\ud76c\uac00\ub85c", "buildYear": 2018, "buyerGbn": "\uac1c\uc778", "cdealDay": " ", "cdealType": " ", "dealAmount": "29,300", "dealDay": 15, "dealMonth": 5, "dealYear": 2026, "dealingGbn": "\uc911\uac1c\uac70\ub798", "estateAgentSggNm": "\uacbd\ub0a8 \uc758\ub839\uad70", "excluUseAr": 84.9724, "floor": 10, "jibun": 1556, "landLeaseholdGbn": "N", "rgstDate": " ", "sggCd": 48720, "slerGbn": "\uac1c\uc778", "umdNm": "\uc758\ub839\uc74d \ub3d9\ub3d9\ub9ac"}, {"aptDong": " ", "aptNm": "\uccad\uc6b4\ube4c\ub77c", "buildYear": 1996, "buyerGbn": "\uac1c\uc778", "cdealDay": " ", "cdealType": " ", "dealAmount": "7,700", "dealDay": 11, "dealMonth": 5, "dealYear": 2026, "dealingGbn": "\uc9c1\uac70\ub798", "estateAgentSggNm": " ", "excluUseAr": 66.79, "floor": 6, "jibun": "1047-7", "landLeaseholdGbn": "N", "rgstDate": "26.05.21", "sggCd": 48720, "slerGbn": "\uac1c\uc778", "umdNm": "\uc758\ub839\uc74d \ub3d9\ub3d9\ub9ac"}, {"aptDong": " ", "aptNm": "\uc9c4\uc2b9VIEW\uc8fc\uc0c1\ubcf5\ud569\uc544\ud30c\ud2b8", "buildYear": 2018, "buyerGbn": "\uac1c\uc778", "cdealDay": " ", "cdealType": " ", "dealAmount": "26,000", "dealDay": 30, "dealMonth": 4, "dealYear": 2026, "dealingGbn": "\uc9c1\uac70\ub798", "estateAgentSggNm": " ", "excluUseAr": 84.16, "floor": 9, "jibun": 395, "landLeaseholdGbn": "N", "rgstDate": "26.05.29", "sggCd": 48720, "slerGbn": "\uac1c\uc778", "umdNm": "\uc758\ub839\uc74d \uc911\ub3d9\ub9ac"}, {"aptDong": "\ube44", "aptNm": "\uc0bc\uc601\ud0c0\uc6b4", "buildYear": 1992, "buyerGbn": "\uac1c\uc778", "cdealDay": " ", "cdealType": " ", "dealAmount": "7,500", "dealDay": 30, "dealMonth": 4, "dealYear": 2026, "dealingGbn": "\uc9c1\uac70\ub798", "estateAgentSggNm": " ", "excluUseAr": 59.76, "floor": 1, "jibun": "862-18", "landLeaseholdGbn": "N", "rgstDate": "26.06.01", "sggCd": 48720, "slerGbn": "\uac1c\uc778", "umdNm": "\uc758\ub839\uc74d \ub3d9\ub3d9\ub9ac"}, {"aptDong": " ", "aptNm": "\uc11c\uad11", "buildYear": 1997, "buyerGbn": "\uac1c\uc778", "cdealDay": " ", "cdealType": " ", "dealAmount": "13,000", "dealDay": 9, "dealMonth": 4, "dealYear": 2026, "dealingGbn": "\uc9c1\uac70\ub798", "estateAgentSggNm": " ", "excluUseAr": 59.8, "floor": 9, "jibun": "508-1", "landLeaseholdGbn": "N", "rgstDate": "26.04.14", "sggCd": 48720, "slerGbn": "\uac1c\uc778", "umdNm": "\uc758\ub839\uc74d \uc11c\ub3d9\ub9ac"}, {"aptDong": "\uc81c1\ub3d9", "aptNm": "\ud61c\uc131\ubbf8\uc8fc\uc0c1\ubcf5\ud569\uc544\ud30c\ud2b8", "buildYear": 2024, "buyerGbn": "\uac1c\uc778", "cdealDay": " ", "cdealType": " ", "dealAmount": "20,500", "dealDay": 4, "dealMonth": 4, "dealYear": 2026, "dealingGbn": "\uc9c1\uac70\ub798", "estateAgentSggNm": " ", "excluUseAr": 82.8948, "floor": 12, "jibun": "394-15", "landLeaseholdGbn": "N", "rgstDate": "26.04.06", "sggCd": 48720, "slerGbn": "\uac1c\uc778", "umdNm": "\uc758\ub839\uc74d \uc911\ub3d9\ub9ac"}];</script>
 <script src="/js/realtime.js" defer></script>
 
 </body>
