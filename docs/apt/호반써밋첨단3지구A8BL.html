@@ -286,6 +286,9 @@
               <span style="font-size:.9rem;">카카오맵 로딩 중...</span>
             </div>
           </div>
+          <div id="facilities-section" style="display:none; margin-top:14px;">
+            <div class="facilities-grid" id="facilities-grid"></div>
+          </div>
         </div>
 
         <!-- ⑥ 주변 실거래가 -->
@@ -444,13 +447,16 @@ window.addEventListener('load', function () {
         map.setCenter(coords);
         var ps = new kakao.maps.services.Places();
         var cats = [
-          { code: 'SC4', color: '#16A34A' },
-          { code: 'SW8', color: '#2563EB' },
-          { code: 'CS2', color: '#EA580C' },
+          { code: 'SC4', color: '#16A34A', label: '🏫 학교' },
+          { code: 'SW8', color: '#2563EB', label: '🚇 지하철' },
+          { code: 'CS2', color: '#EA580C', label: '🏪 편의점' },
         ];
+        var facSection = document.getElementById('facilities-section');
+        var facGrid   = document.getElementById('facilities-grid');
         cats.forEach(function (cat) {
           ps.categorySearch(cat.code, function (data, st) {
             if (st !== kakao.maps.services.Status.OK) return;
+            /* 지도 마커 */
             data.forEach(function (place) {
               var pos = new kakao.maps.LatLng(place.y, place.x);
               var marker = new kakao.maps.Marker({ map: map, position: pos, title: place.place_name });
@@ -461,6 +467,26 @@ window.addEventListener('load', function () {
               marker.addListener('mouseover', function () { ov.setMap(map); });
               marker.addListener('mouseout',  function () { ov.setMap(null); });
             });
+            /* 텍스트 목록 */
+            if (data.length && facGrid) {
+              var group = document.createElement('div');
+              group.className = 'facility-group';
+              group.innerHTML = '<h4 style="color:' + cat.color + '">' + cat.label + '</h4>';
+              var ul = document.createElement('ul');
+              ul.style.cssText = 'list-style:none;padding:0;margin:0;';
+              data.slice(0, 5).forEach(function (place) {
+                var d = parseInt(place.distance || '0');
+                var distStr = d >= 1000 ? (d / 1000).toFixed(1) + 'km' : d + 'm';
+                var li = document.createElement('li');
+                li.className = 'facility-item';
+                li.innerHTML = '<span>' + place.place_name + '</span>'
+                             + (d ? '<span class="facility-dist">' + distStr + '</span>' : '');
+                ul.appendChild(li);
+              });
+              group.appendChild(ul);
+              facGrid.appendChild(group);
+              if (facSection) facSection.style.display = '';
+            }
           }, { location: coords, radius: 1000 });
         });
       }
