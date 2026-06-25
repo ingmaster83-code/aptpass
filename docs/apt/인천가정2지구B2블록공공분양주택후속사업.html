@@ -460,22 +460,25 @@ window.addEventListener('load', function () {
         });
       }
 
-      /* 주소 → 좌표 변환 (괄호 포함 주소는 앞부분만 사용) */
-      var cleanAddr = addr.replace(/\s*\(.*/, '').trim();
-      gc.addressSearch(cleanAddr, function (result, status) {
-        if (status === kakao.maps.services.Status.OK) {
-          searchNearby(new kakao.maps.LatLng(result[0].y, result[0].x));
-        } else {
-          /* 마지막 단어(지구명 등) 제거 후 재시도 */
-          var parts = cleanAddr.split(' ');
-          var shortAddr = parts.slice(0, Math.max(2, parts.length - 1)).join(' ');
-          gc.addressSearch(shortAddr, function (r2, s2) {
-            if (s2 === kakao.maps.services.Status.OK) {
-              searchNearby(new kakao.maps.LatLng(r2[0].y, r2[0].x));
-            }
-          });
-        }
-      });
+      /* 주소 → 좌표 변환: 괄호 안 법정주소 → 괄호 앞 주소 → 시군구 순으로 시도 */
+      var parenM = addr.match(/\(([^)]+)\)/);
+      var legalAddr = parenM ? parenM[1].replace(/\s*(일원|번지\s*일원)$/, '').trim() : '';
+      var cleanAddr = addr.replace(/\s*\(.*/, '').replace(/\s+[A-Za-z0-9]+BL\s*$/, '').trim();
+      var parts0 = cleanAddr.split(' ');
+      var shortAddr = parts0.slice(0, Math.max(2, parts0.length - 1)).join(' ');
+      var candidates = [legalAddr, cleanAddr, shortAddr].filter(Boolean);
+      var tried = 0;
+      function tryNext() {
+        if (tried >= candidates.length) return;
+        gc.addressSearch(candidates[tried++], function (result, status) {
+          if (status === kakao.maps.services.Status.OK) {
+            searchNearby(new kakao.maps.LatLng(result[0].y, result[0].x));
+          } else {
+            tryNext();
+          }
+        });
+      }
+      tryNext();
     });
   };
   document.head.appendChild(s);
