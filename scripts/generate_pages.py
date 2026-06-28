@@ -253,7 +253,10 @@ def filter_active(apt_list):
     """계약 종료일 >= 오늘"""
     active = [x for x in apt_list if (x.get("CNTRCT_CNCLS_ENDDE") or "") >= TODAY_STR]
     for item in active:
-        item["_dday"] = calc_dday(item.get("RCEPT_ENDDE"), item.get("RCEPT_BGNDE"))
+        item["_dday"] = calc_dday(
+            item.get("GNRL_RNK1_CRSPAREA_RCPTDE") or item.get("RCEPT_ENDDE"),
+            item.get("RCEPT_BGNDE"),
+        )
     def _sort(item):
         dd = item["_dday"]
         if dd["live"]:                            # 청약 접수 중
