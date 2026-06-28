@@ -528,13 +528,22 @@ window.addEventListener('load', function () {
         });
       }
 
-      /* 주소 → 좌표 변환: 괄호 안 법정주소 → 괄호 앞 주소 → 시군구 순으로 시도 */
+      /* 주소 → 좌표 변환: 여러 후보를 순서대로 시도 */
       var parenM = addr.match(/\(([^)]+)\)/);
-      var legalAddr = parenM ? parenM[1].replace(/\s*(일원|번지\s*일원)$/, '').trim() : '';
-      var cleanAddr = addr.replace(/\s*\(.*/, '').replace(/\s+[A-Za-z0-9]+BL\s*$/, '').trim();
-      var parts0 = cleanAddr.split(' ');
-      var shortAddr = parts0.slice(0, Math.max(2, parts0.length - 1)).join(' ');
-      var candidates = [legalAddr, cleanAddr, shortAddr].filter(Boolean);
+      var legalAddr = parenM ? parenM[1].replace(/\s*(일원|번지\s*일원|일대)$/, '').trim() : '';
+      /* 블록코드(A2-1블록, AB23BL 등), 일원, 일대 제거 */
+      var baseAddr = addr
+        .replace(/\s*\(.*/, '')
+        .replace(/\s+[A-Za-z0-9-]+(?:BL|블록)\s*$/i, '')
+        .replace(/\s+(?:일원|일대)\s*$/, '')
+        .trim();
+      /* 점진적으로 뒷 단어를 줄여가며 후보 생성 */
+      var parts0 = baseAddr.split(' ');
+      var candidates = [legalAddr];
+      for (var i = parts0.length; i >= 2; i--) {
+        candidates.push(parts0.slice(0, i).join(' '));
+      }
+      candidates = candidates.filter(function(v, i, a) { return v && a.indexOf(v) === i; });
       var tried = 0;
       function tryNext() {
         if (tried >= candidates.length) return;
