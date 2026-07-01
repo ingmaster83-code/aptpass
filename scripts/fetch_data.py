@@ -226,10 +226,11 @@ def _addr_to_lawd_cd(addr):
 
 def fetch_trade(apt_data: list) -> dict:
     """활성 단지 주소 기반으로 국토부 실거래가 수집 → {lawd_cd: [rows]}"""
-    from datetime import date
+    from datetime import date, datetime, timezone, timedelta
     import urllib.request, urllib.parse
 
-    today = date.today()
+    KST = timezone(timedelta(hours=9))
+    today = datetime.now(KST).date()  # GitHub Actions 러너는 UTC라 date.today()는 KST 기준 하루 전이 됨
     months = []
     for i in range(3):
         y, m = today.year, today.month - i

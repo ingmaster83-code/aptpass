@@ -6,7 +6,7 @@ import os
 import json
 import re
 import unicodedata
-from datetime import date
+from datetime import date, datetime, timezone, timedelta
 from pathlib import Path
 from collections import defaultdict
 from jinja2 import Environment, FileSystemLoader
@@ -18,7 +18,8 @@ TMPL_DIR = Path(__file__).parent / "templates"
 
 KAKAO_KEY = os.environ.get("KAKAO_MAP_KEY", "")
 API_KEY   = os.environ.get("API_KEY", "")
-TODAY = date.today()
+KST = timezone(timedelta(hours=9))
+TODAY = datetime.now(KST).date()  # GitHub Actions 러너는 UTC라 date.today()는 KST 기준 하루 전이 됨
 TODAY_STR = str(TODAY)
 WEEKDAYS = ["월", "화", "수", "목", "금", "토", "일"]
 REGIONS = ["서울","경기","인천","부산","대구","광주","대전","울산","세종","강원","충북","충남","전북","전남","경북","경남","제주"]
