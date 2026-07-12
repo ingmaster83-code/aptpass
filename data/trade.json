@@ -2510,6 +2510,28 @@
     },
     {
       "aptDong": " ",
+      "aptNm": "돈암동일하이빌",
+      "buildYear": 2006,
+      "buyerGbn": "개인",
+      "cdealDay": " ",
+      "cdealType": " ",
+      "dealAmount": "120,000",
+      "dealDay": 19,
+      "dealMonth": 6,
+      "dealYear": 2026,
+      "dealingGbn": "중개거래",
+      "estateAgentSggNm": "서울 성북구",
+      "excluUseAr": 125.043,
+      "floor": 23,
+      "jibun": 120,
+      "landLeaseholdGbn": "N",
+      "rgstDate": " ",
+      "sggCd": 11290,
+      "slerGbn": "개인",
+      "umdNm": "동소문동5가"
+    },
+    {
+      "aptDong": " ",
       "aptNm": "안암동삼성래미안",
       "buildYear": 2005,
       "buyerGbn": "개인",
@@ -3170,28 +3192,6 @@
     },
     {
       "aptDong": " ",
-      "aptNm": "정릉꿈에그린",
-      "buildYear": 2015,
-      "buyerGbn": "개인",
-      "cdealDay": " ",
-      "cdealType": " ",
-      "dealAmount": "97,000",
-      "dealDay": 2,
-      "dealMonth": 6,
-      "dealYear": 2026,
-      "dealingGbn": "중개거래",
-      "estateAgentSggNm": "서울 성북구",
-      "excluUseAr": 84.56,
-      "floor": 6,
-      "jibun": 1037,
-      "landLeaseholdGbn": "N",
-      "rgstDate": " ",
-      "sggCd": 11290,
-      "slerGbn": "개인",
-      "umdNm": "정릉동"
-    },
-    {
-      "aptDong": " ",
       "aptNm": "길음뉴타운8단지(래미안)",
       "buildYear": 2010,
       "buyerGbn": "개인",
@@ -3719,7 +3719,7 @@
       "umdNm": "길음동"
     },
     {
-      "aptDong": " ",
+      "aptDong": 103,
       "aptNm": "보문리슈빌하우트",
       "buildYear": 2022,
       "buyerGbn": "개인",
@@ -3735,7 +3735,7 @@
       "floor": 8,
       "jibun": 228,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 11290,
       "slerGbn": "개인",
       "umdNm": "보문동1가"
@@ -5409,7 +5409,7 @@
       "floor": 10,
       "jibun": "47-23",
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 11305,
       "slerGbn": "개인",
       "umdNm": "수유동"
@@ -14587,7 +14587,7 @@
       "floor": 9,
       "jibun": "206-127",
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 11590,
       "slerGbn": "개인",
       "umdNm": "사당동"
@@ -20271,7 +20271,7 @@
       "umdNm": "명지동"
     },
     {
-      "aptDong": " ",
+      "aptDong": 108,
       "aptNm": "협성·DS엘리시안",
       "buildYear": 2015,
       "buyerGbn": "개인",
@@ -20287,7 +20287,7 @@
       "floor": 19,
       "jibun": 1186,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 26440,
       "slerGbn": "개인",
       "umdNm": "지사동"
@@ -22251,7 +22251,7 @@
       "umdNm": "지사동"
     },
     {
-      "aptDong": " ",
+      "aptDong": "에디슨 타운 111동",
       "aptNm": "퀸덤1차에디슨타운",
       "buildYear": 2009,
       "buyerGbn": "개인",
@@ -22267,7 +22267,7 @@
       "floor": 15,
       "jibun": "3230-11",
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 26440,
       "slerGbn": "개인",
       "umdNm": "명지동"
@@ -22889,7 +22889,7 @@
       "umdNm": "명지동"
     },
     {
-      "aptDong": " ",
+      "aptDong": "203동",
       "aptNm": "부산명지중흥S-클래스에듀오션",
       "buildYear": 2018,
       "buyerGbn": "개인",
@@ -22905,7 +22905,7 @@
       "floor": 16,
       "jibun": 3350,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 26440,
       "slerGbn": "개인",
       "umdNm": "명지동"
@@ -23219,7 +23219,7 @@
       "umdNm": "명지동"
     },
     {
-      "aptDong": " ",
+      "aptDong": "204동",
       "aptNm": "명지2차금강펜테리움센트럴파크",
       "buildYear": 2016,
       "buyerGbn": "개인",
@@ -23235,7 +23235,7 @@
       "floor": 16,
       "jibun": 3343,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 26440,
       "slerGbn": "개인",
       "umdNm": "명지동"
@@ -26019,8 +26019,8 @@
       "aptNm": "이지더원",
       "buildYear": 2011,
       "buyerGbn": "개인",
-      "cdealDay": " ",
-      "cdealType": " ",
+      "cdealDay": "26.07.11",
+      "cdealType": "O",
       "dealAmount": "25,000",
       "dealDay": 20,
       "dealMonth": 6,
@@ -32178,7 +32178,7 @@
       "umdNm": "온양읍 망양리"
     },
     {
-      "aptDong": " ",
+      "aptDong": "104동",
       "aptNm": "울산역신도시동문디이스트",
       "buildYear": 2019,
       "buyerGbn": "개인",
@@ -32194,7 +32194,7 @@
       "floor": 24,
       "jibun": "1678-3",
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 31710,
       "slerGbn": "개인",
       "umdNm": "삼남읍 교동리"
@@ -38034,7 +38034,7 @@
       "umdNm": "용이동"
     },
     {
-      "aptDong": " ",
+      "aptDong": 111,
       "aptNm": "평택the#",
       "buildYear": 2009,
       "buyerGbn": "개인",
@@ -38050,7 +38050,7 @@
       "floor": 7,
       "jibun": 1116,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 41220,
       "slerGbn": "개인",
       "umdNm": "서정동"
@@ -39244,7 +39244,7 @@
       "umdNm": "청북읍 옥길리"
     },
     {
-      "aptDong": " ",
+      "aptDong": 103,
       "aptNm": "부영사랑으로1단지",
       "buildYear": 2011,
       "buyerGbn": "개인",
@@ -39260,7 +39260,7 @@
       "floor": 10,
       "jibun": 1110,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 41220,
       "slerGbn": "개인",
       "umdNm": "청북읍 옥길리"
@@ -41490,7 +41490,7 @@
       "umdNm": "토당동"
     },
     {
-      "aptDong": " ",
+      "aptDong": 601,
       "aptNm": "삼송힐스테이트",
       "buildYear": 2013,
       "buyerGbn": "법인",
@@ -41506,7 +41506,7 @@
       "floor": 3,
       "jibun": 653,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 41281,
       "slerGbn": "개인",
       "umdNm": "신원동"
@@ -43536,7 +43536,7 @@
       "umdNm": "화정동"
     },
     {
-      "aptDong": " ",
+      "aptDong": "502동",
       "aptNm": "원흥호반베르디움더퍼스트5단지",
       "buildYear": 2017,
       "buyerGbn": "개인",
@@ -43552,7 +43552,7 @@
       "floor": 4,
       "jibun": 1006,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 41281,
       "slerGbn": "개인",
       "umdNm": "도내동"
@@ -46000,7 +46000,7 @@
       "umdNm": "동산동"
     },
     {
-      "aptDong": " ",
+      "aptDong": "109동",
       "aptNm": "대곡역롯데캐슬엘클라씨",
       "buildYear": 2022,
       "buyerGbn": "개인",
@@ -46016,7 +46016,7 @@
       "floor": 4,
       "jibun": 930,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 41281,
       "slerGbn": "개인",
       "umdNm": "토당동"
@@ -46814,7 +46814,7 @@
       "umdNm": "행신동"
     },
     {
-      "aptDong": " ",
+      "aptDong": 903,
       "aptNm": "별빛마을9단지(901동에서906동)",
       "buildYear": 1995,
       "buyerGbn": "개인",
@@ -46830,7 +46830,7 @@
       "floor": 5,
       "jibun": 948,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.07",
       "sggCd": 41281,
       "slerGbn": "개인",
       "umdNm": "화정동"
@@ -48841,6 +48841,28 @@
     },
     {
       "aptDong": " ",
+      "aptNm": "창현두산2단지아파트",
+      "buildYear": 1997,
+      "buyerGbn": "개인",
+      "cdealDay": " ",
+      "cdealType": " ",
+      "dealAmount": "24,500",
+      "dealDay": 7,
+      "dealMonth": 7,
+      "dealYear": 2026,
+      "dealingGbn": "중개거래",
+      "estateAgentSggNm": "경기 남양주시",
+      "excluUseAr": 59.88,
+      "floor": 2,
+      "jibun": 745,
+      "landLeaseholdGbn": "N",
+      "rgstDate": " ",
+      "sggCd": 41360,
+      "slerGbn": "개인",
+      "umdNm": "화도읍 창현리"
+    },
+    {
+      "aptDong": " ",
       "aptNm": "한신1",
       "buildYear": 1997,
       "buyerGbn": "개인",
@@ -49875,28 +49897,6 @@
     },
     {
       "aptDong": " ",
-      "aptNm": "다산 이편한세상자이",
-      "buildYear": 2018,
-      "buyerGbn": "개인",
-      "cdealDay": " ",
-      "cdealType": " ",
-      "dealAmount": "86,000",
-      "dealDay": 4,
-      "dealMonth": 7,
-      "dealYear": 2026,
-      "dealingGbn": "중개거래",
-      "estateAgentSggNm": "경기 남양주시",
-      "excluUseAr": 59.98,
-      "floor": 19,
-      "jibun": 6133,
-      "landLeaseholdGbn": "N",
-      "rgstDate": " ",
-      "sggCd": 41360,
-      "slerGbn": "개인",
-      "umdNm": "다산동"
-    },
-    {
-      "aptDong": " ",
       "aptNm": "남양주두산위브트레지움",
       "buildYear": 2020,
       "buyerGbn": "개인",
@@ -50527,6 +50527,28 @@
       "excluUseAr": 99.9166,
       "floor": 36,
       "jibun": 6028,
+      "landLeaseholdGbn": "N",
+      "rgstDate": " ",
+      "sggCd": 41360,
+      "slerGbn": "개인",
+      "umdNm": "다산동"
+    },
+    {
+      "aptDong": " ",
+      "aptNm": "플루리움3단지",
+      "buildYear": 2001,
+      "buyerGbn": "개인",
+      "cdealDay": " ",
+      "cdealType": " ",
+      "dealAmount": "70,000",
+      "dealDay": 17,
+      "dealMonth": 6,
+      "dealYear": 2026,
+      "dealingGbn": "중개거래",
+      "estateAgentSggNm": "경기 남양주시",
+      "excluUseAr": 124.619,
+      "floor": 13,
+      "jibun": "4002-1",
       "landLeaseholdGbn": "N",
       "rgstDate": " ",
       "sggCd": 41360,
@@ -52072,28 +52094,6 @@
       "sggCd": 41360,
       "slerGbn": "개인",
       "umdNm": "호평동"
-    },
-    {
-      "aptDong": " ",
-      "aptNm": "다산펜테리움리버테라스Ⅱ",
-      "buildYear": 2019,
-      "buyerGbn": "개인",
-      "cdealDay": " ",
-      "cdealType": " ",
-      "dealAmount": "105,000",
-      "dealDay": 20,
-      "dealMonth": 6,
-      "dealYear": 2026,
-      "dealingGbn": "중개거래",
-      "estateAgentSggNm": "경기 남양주시, 서울 강남구",
-      "excluUseAr": 84.9527,
-      "floor": 5,
-      "jibun": 6235,
-      "landLeaseholdGbn": "N",
-      "rgstDate": " ",
-      "sggCd": 41360,
-      "slerGbn": "개인",
-      "umdNm": "다산동"
     },
     {
       "aptDong": " ",
@@ -61142,7 +61142,7 @@
       "umdNm": "군자동"
     },
     {
-      "aptDong": " ",
+      "aptDong": "904동",
       "aptNm": "포레하임",
       "buildYear": 2016,
       "buyerGbn": "개인",
@@ -61158,7 +61158,7 @@
       "floor": 9,
       "jibun": 680,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 41390,
       "slerGbn": "개인",
       "umdNm": "조남동"
@@ -61824,7 +61824,7 @@
       "umdNm": "배곧동"
     },
     {
-      "aptDong": " ",
+      "aptDong": "110동",
       "aptNm": "시흥배곧신도시골드클래스",
       "buildYear": 2016,
       "buyerGbn": "개인",
@@ -61840,7 +61840,7 @@
       "floor": 15,
       "jibun": 58,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.09",
       "sggCd": 41390,
       "slerGbn": "개인",
       "umdNm": "배곧동"
@@ -63012,7 +63012,7 @@
       "umdNm": "죽율동"
     },
     {
-      "aptDong": " ",
+      "aptDong": "105동",
       "aptNm": "한라비발디캠퍼스",
       "buildYear": 2017,
       "buyerGbn": "개인",
@@ -63028,7 +63028,7 @@
       "floor": 7,
       "jibun": 243,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 41390,
       "slerGbn": "개인",
       "umdNm": "배곧동"
@@ -66702,7 +66702,7 @@
       "floor": 13,
       "jibun": "878-1",
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 41390,
       "slerGbn": "개인",
       "umdNm": "하중동"
@@ -67921,6 +67921,28 @@
     },
     {
       "aptDong": " ",
+      "aptNm": "퇴계주공(351~359동)",
+      "buildYear": 1993,
+      "buyerGbn": "개인",
+      "cdealDay": " ",
+      "cdealType": " ",
+      "dealAmount": "29,000",
+      "dealDay": 4,
+      "dealMonth": 7,
+      "dealYear": 2026,
+      "dealingGbn": "중개거래",
+      "estateAgentSggNm": "경기 군포시",
+      "excluUseAr": 42.75,
+      "floor": 16,
+      "jibun": 875,
+      "landLeaseholdGbn": "N",
+      "rgstDate": " ",
+      "sggCd": 41410,
+      "slerGbn": "법인",
+      "umdNm": "금정동"
+    },
+    {
+      "aptDong": " ",
       "aptNm": "주공9단지금강",
       "buildYear": 1994,
       "buyerGbn": "개인",
@@ -68096,7 +68118,7 @@
       "umdNm": "산본동"
     },
     {
-      "aptDong": " ",
+      "aptDong": 938,
       "aptNm": "묘향(롯데)",
       "buildYear": 1993,
       "buyerGbn": "개인",
@@ -68112,7 +68134,7 @@
       "floor": 15,
       "jibun": 1148,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.07",
       "sggCd": 41410,
       "slerGbn": "개인",
       "umdNm": "산본동"
@@ -69417,28 +69439,6 @@
     },
     {
       "aptDong": " ",
-      "aptNm": "퇴계주공(351~359동)",
-      "buildYear": 1993,
-      "buyerGbn": "개인",
-      "cdealDay": " ",
-      "cdealType": " ",
-      "dealAmount": "29,900",
-      "dealDay": 1,
-      "dealMonth": 7,
-      "dealYear": 2026,
-      "dealingGbn": "중개거래",
-      "estateAgentSggNm": "경기 군포시",
-      "excluUseAr": 42.75,
-      "floor": 20,
-      "jibun": 875,
-      "landLeaseholdGbn": "N",
-      "rgstDate": " ",
-      "sggCd": 41410,
-      "slerGbn": "개인",
-      "umdNm": "금정동"
-    },
-    {
-      "aptDong": " ",
       "aptNm": "삼익소월",
       "buildYear": 1993,
       "buyerGbn": "개인",
@@ -69768,7 +69768,7 @@
       "umdNm": "산본동"
     },
     {
-      "aptDong": " ",
+      "aptDong": 913,
       "aptNm": "주공9단지금강",
       "buildYear": 1994,
       "buyerGbn": "개인",
@@ -69784,7 +69784,7 @@
       "floor": 4,
       "jibun": "1148-4",
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 41410,
       "slerGbn": "개인",
       "umdNm": "산본동"
@@ -70890,7 +70890,7 @@
       "umdNm": "금정동"
     },
     {
-      "aptDong": " ",
+      "aptDong": 408,
       "aptNm": "한라주공4",
       "buildYear": 1992,
       "buyerGbn": "개인",
@@ -70906,7 +70906,7 @@
       "floor": 4,
       "jibun": "1156-1",
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.07",
       "sggCd": 41410,
       "slerGbn": "개인",
       "umdNm": "산본동"
@@ -72276,7 +72276,7 @@
       "umdNm": "산본동"
     },
     {
-      "aptDong": " ",
+      "aptDong": 1108,
       "aptNm": "주공11",
       "buildYear": 1991,
       "buyerGbn": "개인",
@@ -72292,7 +72292,7 @@
       "floor": 4,
       "jibun": 1052,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.07",
       "sggCd": 41410,
       "slerGbn": "개인",
       "umdNm": "산본동"
@@ -77602,7 +77602,7 @@
       "umdNm": "포일동"
     },
     {
-      "aptDong": " ",
+      "aptDong": 101,
       "aptNm": "부곡대우이안",
       "buildYear": 2003,
       "buyerGbn": "개인",
@@ -77618,7 +77618,7 @@
       "floor": 5,
       "jibun": "462-20",
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.06",
       "sggCd": 41430,
       "slerGbn": "개인",
       "umdNm": "삼동"
@@ -79006,7 +79006,7 @@
       "floor": 5,
       "jibun": "1-1",
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 41500,
       "slerGbn": "개인",
       "umdNm": "부발읍 마암리"
@@ -84250,7 +84250,7 @@
       "umdNm": "고촌읍 신곡리"
     },
     {
-      "aptDong": " ",
+      "aptDong": "117동",
       "aptNm": "고촌센트럴자이",
       "buildYear": 2024,
       "buyerGbn": "개인",
@@ -84266,7 +84266,7 @@
       "floor": 2,
       "jibun": "가-",
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 41570,
       "slerGbn": "개인",
       "umdNm": "고촌읍 신곡리"
@@ -93779,7 +93779,7 @@
       "umdNm": "덕정동"
     },
     {
-      "aptDong": " ",
+      "aptDong": "1704동",
       "aptNm": "양주회천한양수자인",
       "buildYear": 2022,
       "buyerGbn": "개인",
@@ -93795,7 +93795,7 @@
       "floor": 13,
       "jibun": 947,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.07",
       "sggCd": 41630,
       "slerGbn": "개인",
       "umdNm": "덕계동"
@@ -96767,7 +96767,7 @@
       "floor": 6,
       "jibun": 1322,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.07",
       "sggCd": 44133,
       "slerGbn": "개인",
       "umdNm": "성정동"
@@ -99281,7 +99281,7 @@
       "umdNm": "성거읍 저리"
     },
     {
-      "aptDong": " ",
+      "aptDong": 206,
       "aptNm": "주공7단지2차",
       "buildYear": 1995,
       "buyerGbn": "개인",
@@ -99297,7 +99297,7 @@
       "floor": 5,
       "jibun": 1282,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 44133,
       "slerGbn": "개인",
       "umdNm": "쌍용동"
@@ -103243,7 +103243,7 @@
       "umdNm": "정평동"
     },
     {
-      "aptDong": " ",
+      "aptDong": "105동",
       "aptNm": "경산하양호반써밋더퍼스트",
       "buildYear": 2021,
       "buyerGbn": "개인",
@@ -103259,7 +103259,7 @@
       "floor": 9,
       "jibun": 349,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.09",
       "sggCd": 47290,
       "slerGbn": "개인",
       "umdNm": "하양읍 서사리"
@@ -107007,7 +107007,7 @@
       "umdNm": "진영읍 진영리"
     },
     {
-      "aptDong": " ",
+      "aptDong": 903,
       "aptNm": "율현마을이편한세상9단지",
       "buildYear": 2013,
       "buyerGbn": "개인",
@@ -107023,7 +107023,7 @@
       "floor": 9,
       "jibun": 1370,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 48250,
       "slerGbn": "개인",
       "umdNm": "율하동"
@@ -107293,7 +107293,7 @@
       "umdNm": "율하동"
     },
     {
-      "aptDong": " ",
+      "aptDong": "102동",
       "aptNm": "삼계서희스타힐스",
       "buildYear": 2019,
       "buyerGbn": "개인",
@@ -107309,7 +107309,7 @@
       "floor": 16,
       "jibun": 1545,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.09",
       "sggCd": 48250,
       "slerGbn": "개인",
       "umdNm": "삼계동"
@@ -108937,7 +108937,7 @@
       "floor": 1,
       "jibun": "226-1",
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.07",
       "sggCd": 48250,
       "slerGbn": "개인",
       "umdNm": "한림면 장방리"
@@ -114577,7 +114577,7 @@
       "umdNm": "내이동"
     },
     {
-      "aptDong": " ",
+      "aptDong": 102,
       "aptNm": "유성청구타운",
       "buildYear": 1994,
       "buyerGbn": "개인",
@@ -114593,7 +114593,7 @@
       "floor": 11,
       "jibun": "15-1",
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 48270,
       "slerGbn": "개인",
       "umdNm": "삼문동"
@@ -115855,7 +115855,7 @@
       "umdNm": "상동동"
     },
     {
-      "aptDong": " ",
+      "aptDong": 102,
       "aptNm": "장승포주공(마전마을)",
       "buildYear": 1998,
       "buyerGbn": "개인",
@@ -115871,7 +115871,7 @@
       "floor": 10,
       "jibun": 631,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 48310,
       "slerGbn": "개인",
       "umdNm": "장승포동"
@@ -115943,7 +115943,7 @@
       "umdNm": "상동동"
     },
     {
-      "aptDong": " ",
+      "aptDong": 112,
       "aptNm": "혜성",
       "buildYear": 1994,
       "buyerGbn": "개인",
@@ -115959,7 +115959,7 @@
       "floor": 2,
       "jibun": "877-1",
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 48310,
       "slerGbn": "개인",
       "umdNm": "옥포동"
@@ -116779,7 +116779,7 @@
       "umdNm": "옥포동"
     },
     {
-      "aptDong": " ",
+      "aptDong": 301,
       "aptNm": "고려3차(301-303동)",
       "buildYear": 1993,
       "buyerGbn": "개인",
@@ -116795,7 +116795,7 @@
       "floor": 4,
       "jibun": 1050,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.07",
       "sggCd": 48310,
       "slerGbn": "개인",
       "umdNm": "고현동"
@@ -116817,7 +116817,7 @@
       "floor": 4,
       "jibun": 726,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 48310,
       "slerGbn": "개인",
       "umdNm": "장평동"
@@ -118275,7 +118275,7 @@
       "umdNm": "연초면 죽토리"
     },
     {
-      "aptDong": " ",
+      "aptDong": "202동",
       "aptNm": "e편한세상옥포아파트2단지",
       "buildYear": 2016,
       "buyerGbn": "개인",
@@ -118291,7 +118291,7 @@
       "floor": 7,
       "jibun": "878-4",
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 48310,
       "slerGbn": "개인",
       "umdNm": "옥포동"
@@ -118583,7 +118583,7 @@
       "umdNm": "옥포동"
     },
     {
-      "aptDong": " ",
+      "aptDong": 101,
       "aptNm": "거제센트럴푸르지오",
       "buildYear": 2018,
       "buyerGbn": "개인",
@@ -118599,7 +118599,7 @@
       "floor": 14,
       "jibun": 756,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 48310,
       "slerGbn": "개인",
       "umdNm": "문동동"
@@ -119045,7 +119045,7 @@
       "umdNm": "옥포동"
     },
     {
-      "aptDong": " ",
+      "aptDong": "102동",
       "aptNm": "거제코아루파크드림",
       "buildYear": 2018,
       "buyerGbn": "개인",
@@ -119061,7 +119061,7 @@
       "floor": 6,
       "jibun": 1412,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 48310,
       "slerGbn": "개인",
       "umdNm": "일운면 지세포리"
@@ -121181,7 +121181,7 @@
       "umdNm": "물금읍 가촌리"
     },
     {
-      "aptDong": " ",
+      "aptDong": 112,
       "aptNm": "천성리버타운",
       "buildYear": 1998,
       "buyerGbn": "개인",
@@ -121197,7 +121197,7 @@
       "floor": 1,
       "jibun": "147-1",
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 48330,
       "slerGbn": "개인",
       "umdNm": "소주동"
@@ -121885,7 +121885,7 @@
       "umdNm": "물금읍 가촌리"
     },
     {
-      "aptDong": " ",
+      "aptDong": "104동",
       "aptNm": "양산코오롱하늘채",
       "buildYear": 2020,
       "buyerGbn": "개인",
@@ -121901,7 +121901,7 @@
       "floor": 22,
       "jibun": 1323,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 48330,
       "slerGbn": "개인",
       "umdNm": "물금읍 가촌리"
@@ -127427,7 +127427,7 @@
       "floor": 4,
       "jibun": "1323-3",
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 50110,
       "slerGbn": "개인",
       "umdNm": "구좌읍 세화리"
@@ -131723,7 +131723,7 @@
       "umdNm": "이도이동"
     },
     {
-      "aptDong": " ",
+      "aptDong": 414,
       "aptNm": "화북주공4단지",
       "buildYear": 1998,
       "buyerGbn": "개인",
@@ -131739,7 +131739,7 @@
       "floor": 3,
       "jibun": "12-1",
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 50110,
       "slerGbn": "개인",
       "umdNm": "화북일동"
@@ -132191,8 +132191,8 @@
       "aptNm": "휴먼타운",
       "buildYear": 2002,
       "buyerGbn": "개인",
-      "cdealDay": " ",
-      "cdealType": " ",
+      "cdealDay": "26.07.11",
+      "cdealType": "O",
       "dealAmount": "25,800",
       "dealDay": 10,
       "dealMonth": 7,
@@ -137379,7 +137379,7 @@
       "umdNm": "퇴계동"
     },
     {
-      "aptDong": " ",
+      "aptDong": 505,
       "aptNm": "주공5",
       "buildYear": 1989,
       "buyerGbn": "개인",
@@ -137395,7 +137395,7 @@
       "floor": 1,
       "jibun": 481,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 51110,
       "slerGbn": "개인",
       "umdNm": "후평동"
@@ -139273,7 +139273,7 @@
       "umdNm": "조촌동"
     },
     {
-      "aptDong": " ",
+      "aptDong": 201,
       "aptNm": "시영2차",
       "buildYear": 1991,
       "buyerGbn": "개인",
@@ -139289,7 +139289,7 @@
       "floor": 10,
       "jibun": 3551,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 52130,
       "slerGbn": "개인",
       "umdNm": "산북동"
@@ -139317,7 +139317,7 @@
       "umdNm": "조촌동"
     },
     {
-      "aptDong": " ",
+      "aptDong": 102,
       "aptNm": "청솔",
       "buildYear": 2002,
       "buyerGbn": "개인",
@@ -139333,7 +139333,7 @@
       "floor": 1,
       "jibun": 161,
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 52130,
       "slerGbn": "개인",
       "umdNm": "나운동"
@@ -139405,7 +139405,7 @@
       "umdNm": "조촌동"
     },
     {
-      "aptDong": " ",
+      "aptDong": 511,
       "aptNm": "주공5차",
       "buildYear": 1995,
       "buyerGbn": "개인",
@@ -139421,7 +139421,7 @@
       "floor": 8,
       "jibun": "45-7",
       "landLeaseholdGbn": "N",
-      "rgstDate": " ",
+      "rgstDate": "26.07.08",
       "sggCd": 52130,
       "slerGbn": "개인",
       "umdNm": "나운동"
