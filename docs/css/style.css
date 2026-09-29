@@ -630,3 +630,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .blog-list li { padding: 18px 0; border-bottom: 1px solid #E5E7EB; }
 .blog-list li strong { font-size: 1.1rem; }
 .blog-list li p { margin: 6px 0 4px; color: var(--text-secondary); font-size: .92rem; line-height: 1.6; }
+
+/* 상단 안내 배너 (자사 도구 안내) */
+.top-promo { background: #F0F9FF; border-bottom: 1px solid #E0F2FE; font-size: .85rem; }
+.top-promo .container { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; padding-top: 8px; padding-bottom: 8px; }
+.top-promo-label { font-size: .7rem; font-weight: 700; color: #0369A1; background: #E0F2FE; border-radius: 4px; padding: 2px 6px; }
+.top-promo-text { color: var(--text-secondary); }
+.top-promo a { color: var(--primary); font-weight: 600; text-decoration: none; }
+.top-promo a:hover { text-decoration: underline; }

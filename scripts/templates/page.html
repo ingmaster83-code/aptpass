@@ -1,10 +1,9 @@
 {% extends "base.html" %}
-{% block title %}{{ page.title }} | aptpass{% endblock %}
+{% block title %}{{ page.title }} | {{ site.name }}{% endblock %}
 {% block description %}{{ page.description }}{% endblock %}
 {% block og_title %}{{ page.title }}{% endblock %}
 {% block og_desc %}{{ page.description }}{% endblock %}
-{% block canonical %}https://aptpass.kr/{{ page.slug }}.html{% endblock %}
-{% block robots %}<meta name="robots" content="index, follow">{% endblock %}
+{% block canonical %}{{ site.domain }}/{{ page.slug }}.html{% endblock %}
 {% block content %}
 <div class="container article-wrap">
   <article class="article">

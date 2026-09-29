@@ -41,4 +41,4 @@ slug: cheongyak-account-types
 
 ## 마무리
 
-청약통장은 종류가 많아 보여도, 새로 시작하는 사람에게는 **주택청약종합저축 하나**로 충분합니다. 이미 예전 통장을 가지고 있다면 유지하면서 가점과 자격 요건을 확인하는 것이 먼저입니다. 청약 일정과 단지 정보는 [청약목록](/list.html)과 [청약 캘린더](/calendar.html)에서 확인하고, 점수 계산 방법은 [가점제 계산 가이드](/blog/cheongyak-score-calculation.html)를 함께 읽어 보세요.
+청약통장은 종류가 많아 보여도, 새로 시작하는 사람에게는 **주택청약종합저축 하나**로 충분합니다. 이미 예전 통장을 가지고 있다면 유지하면서 가점과 자격 요건을 확인하는 것이 먼저입니다. 청약 일정과 단지 정보는 [청약목록](https://wooaaptpass.wooahouse.com/list.html)과 [청약 캘린더](https://wooaaptpass.wooahouse.com/calendar.html)에서 확인하고, 점수 계산 방법은 [가점제 계산 가이드](/blog/cheongyak-score-calculation.html)를 함께 읽어 보세요.
