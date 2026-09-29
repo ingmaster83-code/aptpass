@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}{{ post.title }} | aptpass{% endblock %}
+{% block description %}{{ post.description }}{% endblock %}
+{% block og_title %}{{ post.title }}{% endblock %}
+{% block og_desc %}{{ post.description }}{% endblock %}
+{% block canonical %}https://aptpass.kr/blog/{{ post.slug }}.html{% endblock %}
+{% block robots %}<meta name="robots" content="index, follow, max-image-preview:large">{% endblock %}
+{% block extra_head %}
+  <meta property="article:published_time" content="{{ post.date }}">
+  <script type="application/ld+json">
+  {{ ld_json | safe }}
+  </script>
+{% endblock %}
+{% block content %}
+<div class="container article-wrap">
+  <nav class="breadcrumb"><a href="/">홈</a> › <a href="/blog/">청약가이드</a> › <span>{{ post.title }}</span></nav>
+  <article class="article">
+    <h1>{{ post.title }}</h1>
+    <p class="article-meta">{{ post.date }} · aptpass 편집팀</p>
+    <div class="article-body">
+      {{ post.html | safe }}
+    </div>
+    <aside class="article-cta">
+      <strong>지금 진행 중인 청약 확인하기</strong>
+      <p>청약홈 공공데이터를 기반으로 매일 갱신되는 일정입니다.</p>
+      <a href="/list.html">청약목록</a> <a href="/calendar.html">청약 캘린더</a> <a href="/residual.html">무순위 청약</a>
+    </aside>
+    <p class="article-note">※ 청약 제도의 기준(소득·자산·점수 등)은 자주 개정됩니다. 신청 전에는 반드시 해당 단지의 입주자모집공고문과 <a href="https://www.applyhome.co.kr" target="_blank" rel="noopener">청약홈</a>의 최신 안내를 확인하세요.</p>
+  </article>
+  {% if others %}
+  <section class="related">
+    <h2>함께 읽어보세요</h2>
+    <ul>
+      {% for o in others %}<li><a href="/blog/{{ o.slug }}.html">{{ o.title }}</a></li>{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+</div>
+{% endblock %}

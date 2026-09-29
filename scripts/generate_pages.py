@@ -9,12 +9,14 @@ import unicodedata
 from datetime import date, datetime, timezone, timedelta
 from pathlib import Path
 from collections import defaultdict
+import markdown as md_lib
 from jinja2 import Environment, FileSystemLoader
 
 BASE_DIR = Path(__file__).parent.parent
 DATA_DIR = BASE_DIR / "data"
 DOCS_DIR = BASE_DIR / "docs"
 TMPL_DIR = Path(__file__).parent / "templates"
+CONTENT_DIR = BASE_DIR / "content"
 
 KAKAO_KEY = os.environ.get("KAKAO_MAP_KEY", "")
 API_KEY   = os.environ.get("API_KEY", "")
@@ -445,7 +447,64 @@ def gen_score(winner_stat):
     render("score.html", DOCS_DIR / "score.html", stat_rows=rows[:300])
 
 
-def gen_sitemap(active, residual_active):
+
+# ── 청약가이드(블로그) · 고정 페이지 ─────────────────
+
+def load_md(path):
+    """content/*.md → {title, description, date, slug, html}. 상단 --- key: value --- 헤더."""
+    raw = path.read_text(encoding="utf-8")
+    meta, body = {}, raw
+    if raw.startswith("---"):
+        _, head, body = raw.split("---", 2)
+        for line in head.strip().splitlines():
+            if ":" in line:
+                k, v = line.split(":", 1)
+                meta[k.strip()] = v.strip().strip('"')
+    meta.setdefault("slug", path.stem)
+    meta.setdefault("date", TODAY_STR)
+    meta.setdefault("description", "")
+    meta["html"] = md_lib.markdown(body.strip(), extensions=["tables"])
+    return meta
+
+
+def gen_blog():
+    print(chr(10) + "[blog] 청약가이드")
+    posts = []
+    for f in sorted((CONTENT_DIR / "blog").glob("*.md")):
+        m = load_md(f)
+        if m.get("draft", "").lower() == "true":
+            continue
+        posts.append(m)
+    posts.sort(key=lambda x: x["date"], reverse=True)
+    for m in posts:
+        others = [o for o in posts if o["slug"] != m["slug"]][:4]
+        ld = json.dumps({
+            "@context": "https://schema.org", "@type": "Article",
+            "headline": m["title"], "description": m["description"],
+            "datePublished": m["date"], "dateModified": m.get("updated", m["date"]),
+            "inLanguage": "ko-KR",
+            "author": {"@type": "Organization", "name": "aptpass 편집팀"},
+            "publisher": {"@type": "Organization", "name": "aptpass", "url": "https://aptpass.kr"},
+            "mainEntityOfPage": f"https://aptpass.kr/blog/{m['slug']}.html",
+        }, ensure_ascii=False)
+        render("blog_post.html", DOCS_DIR / "blog" / f"{m['slug']}.html", post=m, others=others, ld_json=ld)
+    render("blog_index.html", DOCS_DIR / "blog" / "index.html", posts=posts)
+    return posts
+
+
+def gen_pages():
+    print(chr(10) + "[pages] 소개/문의")
+    pages = []
+    for f in sorted((CONTENT_DIR / "pages").glob("*.md")):
+        m = load_md(f)
+        if m.get("draft", "").lower() == "true":
+            continue
+        render("page.html", DOCS_DIR / f"{m['slug']}.html", page=m)
+        pages.append(m)
+    return pages
+
+
+def gen_sitemap(active, residual_active, blog_posts=(), pages=()):
     print("\n[6] sitemap.xml")
     base = "https://aptpass.kr"
     today_iso = TODAY.isoformat()
@@ -462,6 +521,11 @@ def gen_sitemap(active, residual_active):
         n = item.get("HOUSE_NM", "")
         if n:
             urls.append((f"{base}/apt/{slugify(n)}.html", "0.9"))
+    urls.append((f"{base}/blog/", "0.8"))
+    for m in blog_posts:
+        urls.append((f"{base}/blog/{m['slug']}.html", "0.7"))
+    for m in pages:
+        urls.append((f"{base}/{m['slug']}.html", "0.4"))
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
@@ -505,7 +569,9 @@ def main():
     gen_residual(res_act)
     gen_calendar(active)
     gen_score(winner_stat)
-    gen_sitemap(active, res_act)
+    blog_posts = gen_blog()
+    pages = gen_pages()
+    gen_sitemap(active, res_act, blog_posts, pages)
 
     print("\n" + "=" * 55)
     print("완료")

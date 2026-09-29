@@ -601,3 +601,32 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .filter-btn:hover { background: var(--primary-light); border-color: var(--primary); color: var(--primary); }
 .filter-btn.filter-active { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+/* ===== 청약가이드(블로그) ===== */
+.article-wrap { max-width: 800px; padding: 32px 20px 56px; }
+.breadcrumb { font-size: .8rem; color: var(--text-muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--text-secondary); }
+.article h1, .blog-title { font-size: 1.6rem; line-height: 1.4; font-weight: 700; margin-bottom: 8px; }
+.article-meta { font-size: .8rem; color: var(--text-muted); margin-bottom: 24px; }
+.article-body { font-size: 1rem; line-height: 1.85; color: var(--text-primary); }
+.article-body h2 { font-size: 1.25rem; font-weight: 700; margin: 36px 0 12px; }
+.article-body h3 { font-size: 1.05rem; font-weight: 700; margin: 24px 0 8px; }
+.article-body p { margin-bottom: 16px; }
+.article-body ul, .article-body ol { margin: 0 0 16px 22px; }
+.article-body li { margin-bottom: 6px; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: .9rem; }
+.article-body th, .article-body td { border: 1px solid var(--border, #E5E7EB); padding: 8px 10px; text-align: left; vertical-align: top; }
+.article-body th { background: #F3F4F6; }
+.article-body a { color: var(--primary); text-decoration: underline; }
+.article-cta { margin: 32px 0 16px; padding: 18px 20px; border-radius: 12px; background: #EFF6FF; }
+.article-cta p { margin: 6px 0 10px; font-size: .9rem; color: var(--text-secondary); }
+.article-cta a { display: inline-block; margin-right: 10px; font-weight: 600; color: var(--primary); }
+.article-note { font-size: .8rem; color: var(--text-muted); margin-top: 16px; }
+.related { margin-top: 40px; }
+.related h2 { font-size: 1.1rem; margin-bottom: 10px; }
+.related li { margin-bottom: 6px; }
+.blog-lead { color: var(--text-secondary); margin-bottom: 28px; }
+.blog-list { list-style: none; padding: 0; }
+.blog-list li { padding: 18px 0; border-bottom: 1px solid #E5E7EB; }
+.blog-list li strong { font-size: 1.1rem; }
+.blog-list li p { margin: 6px 0 4px; color: var(--text-secondary); font-size: .92rem; line-height: 1.6; }
