@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>분양가 적정성 계산 예시 — 가상 사례로 배우는 실질 분양가와 시세 비교 | aptpass</title>
+  <meta name="description" content="분양가가 적정한지 판단하려면 숫자로 직접 계산해 봐야 합니다. 가상의 숫자를 사용해 전용면적당 가격, 옵션·세금을 더한 실질 분양가, 시세와의 격차를 계산하는 과정을 보여줍니다.">
+  <meta property="og:title" content="분양가 적정성 계산 예시 — 가상 사례로 배우는 실질 분양가와 시세 비교">
+  <meta property="og:description" content="분양가가 적정한지 판단하려면 숫자로 직접 계산해 봐야 합니다. 가상의 숫자를 사용해 전용면적당 가격, 옵션·세금을 더한 실질 분양가, 시세와의 격차를 계산하는 과정을 보여줍니다.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="aptpass">
+  <meta property="og:locale" content="ko_KR">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://aptpass.kr/blog/price-vs-market-worked-example.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <meta property="article:published_time" content="2026-09-30">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "Article", "headline": "분양가 적정성 계산 예시 — 가상 사례로 배우는 실질 분양가와 시세 비교", "description": "분양가가 적정한지 판단하려면 숫자로 직접 계산해 봐야 합니다. 가상의 숫자를 사용해 전용면적당 가격, 옵션·세금을 더한 실질 분양가, 시세와의 격차를 계산하는 과정을 보여줍니다.", "datePublished": "2026-09-30", "dateModified": "2026-09-30", "inLanguage": "ko-KR", "author": {"@type": "Organization", "name": "aptpass 편집팀"}, "publisher": {"@type": "Organization", "name": "aptpass", "url": "https://aptpass.kr"}, "mainEntityOfPage": "https://aptpass.kr/blog/price-vs-market-worked-example.html"}
+  </script>
+
+  <meta name="naver-site-verification" content="6c6dda1cd2bc92df9969e9f29b3970fa857bb7d8">
+  <meta name="google-adsense-account" content="ca-pub-6464921081676309">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-12ZGPE28JM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-12ZGPE28JM');
+  </script>
+  
+</head>
+<body>
+  
+  <div class="top-promo">
+    <div class="container">
+      <span class="top-promo-label">관련 도구</span>
+      <span class="top-promo-text">청약 일정·경쟁률·무순위 물량을 매일 갱신해 보여주는 도구가 필요하다면</span>
+      <a href="https://wooaaptpass.wooahouse.com" target="_blank" rel="noopener">우아하우스 청약정보 바로가기 →</a>
+    </div>
+  </div>
+  
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="logo">apt<span>pass</span></a>
+      <nav class="nav-links">
+        <a href="/">청약가이드</a>
+        <a href="/about.html">소개</a>
+        <a href="/contact.html">문의</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+<div class="container article-wrap">
+  <nav class="breadcrumb"><a href="/">홈</a> › <span>분양가 적정성 계산 예시 — 가상 사례로 배우는 실질 분양가와 시세 비교</span></nav>
+  <article class="article">
+    <h1>분양가 적정성 계산 예시 — 가상 사례로 배우는 실질 분양가와 시세 비교</h1>
+    <p class="article-meta">2026-09-30 · aptpass 편집팀</p>
+    <div class="article-body">
+      <p>분양 공고를 보면 "분양가가 저렴하다"는 말이 많지만 직접 계산해 보면 다를 때가 있습니다. 이 글에서는 <strong>가상의 숫자</strong>로 계산 순서를 보여드립니다. 숫자는 설명용이며 실제 단지와 무관합니다. 비교 기준의 개념은 <a href="/blog/compare-price-with-market.html">분양가 시세 비교</a>를 함께 보세요.</p>
+<h2>예시 조건 (가상)</h2>
+<ul>
+<li>분양 단지: 전용 84㎡, 분양가 6억 원</li>
+<li>발코니 확장비: 2,000만 원, 필수 옵션: 1,500만 원</li>
+<li>주변 준공 5년 이내 단지: 같은 전용 84㎡가 최근 실거래 6억 8천만 원</li>
+</ul>
+<h2>1단계. 실질 분양가 계산</h2>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>금액</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>분양가</td>
+<td>6억 원</td>
+</tr>
+<tr>
+<td>발코니 확장</td>
+<td>2,000만 원</td>
+</tr>
+<tr>
+<td>필수 옵션</td>
+<td>1,500만 원</td>
+</tr>
+<tr>
+<td>취득세 등 세금·등기 비용(가정)</td>
+<td>약 1,000만 원</td>
+</tr>
+<tr>
+<td><strong>합계(실질 분양가)</strong></td>
+<td><strong>약 6억 4,500만 원</strong></td>
+</tr>
+</tbody>
+</table>
+<p>분양가만 보면 6억이지만 입주까지 실제로 드는 돈은 <strong>6억 4,500만 원 안팎</strong>입니다. 세금 항목의 개념은 <a href="/blog/acquisition-tax-basics.html">취득세</a>, 옵션은 <a href="/blog/option-and-extension-costs.html">옵션 비용</a>을 참고하세요.</p>
+<h2>2단계. 시세와 비교</h2>
+<ul>
+<li>주변 단지 실거래 6억 8천만 원 − 실질 분양가 6억 4,500만 원 = <strong>약 3,500만 원 차이</strong></li>
+<li>차이가 클수록 유리해 보이지만, 아래 요소로 보정해야 합니다.</li>
+</ul>
+<h2>3단계. 보정할 요소</h2>
+<ol>
+<li><strong>입주 시점의 시세 변동</strong>: 입주까지 2~3년이 걸리므로 시세가 오르거나 내릴 수 있습니다.</li>
+<li><strong>금융 비용</strong>: 중도금대출 이자를 더하면 실질 부담이 커집니다(<a href="/blog/loans-for-new-apartment.html">분양 대출</a>).</li>
+<li><strong>제약 조건</strong>: 전매 제한과 실거주 의무로 팔 수 없다면 시세 차익을 바로 실현할 수 없습니다(<a href="/blog/resale-and-residence-rules.html">전매제한</a>).</li>
+<li><strong>입지·연식 차이</strong>: 신축 프리미엄과 입지 차이를 반영해야 합니다.</li>
+</ol>
+<h2>결과 해석</h2>
+<ul>
+<li>3,500만 원 차이가 있어도 금융 비용과 세금을 넣으면 <strong>실제 이익은 더 작아질 수 있습니다.</strong></li>
+<li>반대로 차이가 거의 없다면 분양가가 시세에 이미 반영된 것으로 봅니다.</li>
+</ul>
+<h2>직접 계산하는 요령</h2>
+<ol>
+<li>공고문에서 분양가와 옵션 가격을 적습니다.</li>
+<li>실거래가 공개 자료에서 비교 단지의 최근 거래를 확인합니다.</li>
+<li>위 표처럼 항목을 나눠 더하고 뺍니다.</li>
+</ol>
+<h2>마무리</h2>
+<p>계산은 판단의 출발점입니다. 실제 숫자로 여러 단지를 같은 방식으로 비교해 보세요.</p>
+    </div>
+    
+    <aside class="article-cta">
+      <strong>지금 진행 중인 청약 확인하기</strong>
+      <p>청약홈 공공데이터를 바탕으로 매일 갱신되는 일정은 우아하우스 청약정보에서 볼 수 있습니다.</p>
+      <a href="https://wooaaptpass.wooahouse.com/list.html" target="_blank" rel="noopener">청약목록</a> <a href="https://wooaaptpass.wooahouse.com/calendar.html" target="_blank" rel="noopener">청약 캘린더</a> <a href="https://wooaaptpass.wooahouse.com/residual.html" target="_blank" rel="noopener">무순위 청약</a> 
+    </aside>
+    
+    <p class="article-note">※ 청약 제도의 기준(소득·자산·점수 등)은 자주 개정됩니다. 신청 전에는 반드시 해당 단지의 입주자모집공고문과 <a href="https://www.applyhome.co.kr" target="_blank" rel="noopener">청약홈</a>의 최신 안내를 확인하세요.</p>
+  </article>
+  
+  <section class="related">
+    <h2>함께 읽어보세요</h2>
+    <ul>
+      <li><a href="/blog/youth-housing-account-overview.html">청년 우대형 청약통장 개요 — 대상, 우대 혜택, 일반 통장과의 차이 확인법</a></li><li><a href="/blog/warranty-periods-overview.html">공동주택 하자담보책임 기간 개념 — 부위별 보수 책임과 접수 요령</a></li><li><a href="/blog/unsold-apartment-buying.html">미분양 아파트 계약 시 유의점 — 할인 분양의 장단점과 확인 사항</a></li><li><a href="/blog/title-registration-process.html">분양 아파트 소유권 이전등기 절차 — 법무사 선택, 필요 서류, 비용 개념</a></li>
+    </ul>
+  </section>
+  
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>aptpass.kr — 청약 가이드</p>
+      <p class="footer-links">
+        <a href="/about.html">소개</a>
+        <span>|</span>
+        <a href="/contact.html">문의</a>
+        <span>|</span>
+        <a href="/privacy.html">개인정보처리방침</a>
+      </p>
+      <p class="footer-note">본 사이트의 글은 일반적인 정보 제공을 위한 것이며, 청약 신청 전 반드시 청약홈 공식 사이트와 입주자모집공고문을 확인하세요.</p>
+    </div>
+  </footer>
+</body>
+</html>
