@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>추첨제 당첨 확률 이해하기 — 경쟁률, 중복 신청, 무작위 추첨의 의미 | aptpass</title>
+  <meta name="description" content="추첨제는 점수와 관계없이 무작위로 당첨자를 정합니다. 경쟁률과 당첨 확률의 관계, 우선 순위(무주택, 거주지, 청약 횟수), 가점이 낮을 때 추첨제를 활용하는 전략과 착각하기 쉬운 점을 정리했습니다.">
+  <meta property="og:title" content="추첨제 당첨 확률 이해하기 — 경쟁률, 중복 신청, 무작위 추첨의 의미">
+  <meta property="og:description" content="추첨제는 점수와 관계없이 무작위로 당첨자를 정합니다. 경쟁률과 당첨 확률의 관계, 우선 순위(무주택, 거주지, 청약 횟수), 가점이 낮을 때 추첨제를 활용하는 전략과 착각하기 쉬운 점을 정리했습니다.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="aptpass">
+  <meta property="og:locale" content="ko_KR">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://aptpass.kr/blog/lottery-probability-understanding.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <meta property="article:published_time" content="2026-10-01">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "Article", "headline": "추첨제 당첨 확률 이해하기 — 경쟁률, 중복 신청, 무작위 추첨의 의미", "description": "추첨제는 점수와 관계없이 무작위로 당첨자를 정합니다. 경쟁률과 당첨 확률의 관계, 우선 순위(무주택, 거주지, 청약 횟수), 가점이 낮을 때 추첨제를 활용하는 전략과 착각하기 쉬운 점을 정리했습니다.", "datePublished": "2026-10-01", "dateModified": "2026-10-01", "inLanguage": "ko-KR", "author": {"@type": "Organization", "name": "aptpass 편집팀"}, "publisher": {"@type": "Organization", "name": "aptpass", "url": "https://aptpass.kr"}, "mainEntityOfPage": "https://aptpass.kr/blog/lottery-probability-understanding.html"}
+  </script>
+
+  <meta name="naver-site-verification" content="6c6dda1cd2bc92df9969e9f29b3970fa857bb7d8">
+  <meta name="google-adsense-account" content="ca-pub-6464921081676309">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-12ZGPE28JM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-12ZGPE28JM');
+  </script>
+  
+</head>
+<body>
+  
+  <div class="top-promo">
+    <div class="container">
+      <span class="top-promo-label">관련 도구</span>
+      <span class="top-promo-text">청약 일정·경쟁률·무순위 물량을 매일 갱신해 보여주는 도구가 필요하다면</span>
+      <a href="https://wooaaptpass.wooahouse.com" target="_blank" rel="noopener">우아하우스 청약정보 바로가기 →</a>
+    </div>
+  </div>
+  
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="logo">apt<span>pass</span></a>
+      <nav class="nav-links">
+        <a href="/">청약가이드</a>
+        <a href="/about.html">소개</a>
+        <a href="/contact.html">문의</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+<div class="container article-wrap">
+  <nav class="breadcrumb"><a href="/">홈</a> › <span>추첨제 당첨 확률 이해하기 — 경쟁률, 중복 신청, 무작위 추첨의 의미</span></nav>
+  <article class="article">
+    <h1>추첨제 당첨 확률 이해하기 — 경쟁률, 중복 신청, 무작위 추첨의 의미</h1>
+    <p class="article-meta">2026-10-01 · aptpass 편집팀</p>
+    <div class="article-body">
+      <p>가점이 낮은 사람에게 희망이 되는 방식이 <strong>추첨제</strong>입니다. 점수가 아닌 무작위로 당첨자를 정하기 때문입니다. 하지만 "운에 맡기면 된다"는 생각만으로는 부족하고, 확률의 의미를 이해해야 합니다.</p>
+<h2>추첨제는 어디에 있나</h2>
+<ul>
+<li>민영주택은 전용면적에 따라 <strong>가점제와 추첨제 비율</strong>이 정해집니다. 대형 평형은 추첨 비중이 높은 경향이 있습니다(<a href="/blog/cheongyak-score-calculation.html">가점·추첨 차이</a>).</li>
+<li>특별공급 일부 유형, 무순위 청약도 추첨 방식이 많습니다(<a href="/blog/residual-lottery-guide.html">무순위 청약</a>).</li>
+<li>규제 지역에서는 추첨 비율이 낮아질 수 있습니다(<a href="/blog/regulated-areas-guide.html">규제지역</a>).</li>
+</ul>
+<h2>당첨 확률의 기본</h2>
+<ul>
+<li>개략적으로 <strong>당첨 확률 ≈ 공급 세대수 ÷ 신청자 수</strong>입니다.</li>
+<li>경쟁률이 50대 1이면 단순 계산으로 약 2%의 확률입니다.</li>
+<li>다만 순위·자격에 따라 <strong>그룹별 경쟁률</strong>이 다르게 적용됩니다.</li>
+</ul>
+<h2>추첨제 내부의 우선 순위</h2>
+<p>추첨제도 모두 같은 조건으로 뽑는 것은 아닙니다.</p>
+<ol>
+<li><strong>우선 대상자</strong>: 무주택 세대구성원 등 일정 자격을 우선 추첨하는 방식</li>
+<li><strong>일반 대상자</strong>: 우선 물량 이후 남은 물량을 다시 추첨</li>
+<li>거주지(해당지역, 기타지역)에 따라 <strong>먼저 추첨</strong>하는 경우(<a href="/blog/residency-requirement-guide.html">거주지 요건</a>)</li>
+</ol>
+<p>우선 대상 자격이 있는지 확인하면 실질 확률이 높아집니다.</p>
+<h2>오해하기 쉬운 점</h2>
+<table>
+<thead>
+<tr>
+<th>오해</th>
+<th>사실</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>여러 번 신청하면 확률이 쌓인다</td>
+<td>단지별 독립 추첨이며 중복 신청은 제한</td>
+</tr>
+<tr>
+<td>통장 오래 되면 유리하다</td>
+<td>추첨제에서는 점수를 안 보는 경우가 많음(자격만 충족)</td>
+</tr>
+<tr>
+<td>경쟁률이 낮은 곳이 안전하다</td>
+<td>미계약·미분양 이유를 확인 (<a href="/blog/unsold-apartment-buying.html">미분양</a>)</td>
+</tr>
+</tbody>
+</table>
+<h2>전략</h2>
+<ol>
+<li><strong>추첨 물량이 있는 평형</strong>을 목표로 합니다.</li>
+<li>자격 요건을 충족하는 <strong>단지를 여러 곳 지원</strong>합니다(단지별 독립).</li>
+<li>계약 의사와 자금 계획이 있는 단지만 신청합니다(<a href="/blog/down-payment-planning.html">자금 계획</a>).</li>
+<li>예비 당첨자 순번도 확인합니다(<a href="/blog/waiting-list-winners.html">예비 당첨자</a>).</li>
+</ol>
+<h2>마음가짐</h2>
+<ul>
+<li>추첨은 <strong>확률 게임</strong>이므로 반복 도전이 필요할 수 있습니다.</li>
+<li>당첨되지 않아도 다음 단지를 위해 <a href="/blog/ways-to-raise-score.html">점수 관리</a>를 계속하세요.</li>
+</ul>
+<h2>마무리</h2>
+<p>추첨제는 운이지만 자격과 우선순위를 챙기면 확률을 높일 수 있습니다. 공고문의 추첨 방식을 꼼꼼히 읽으세요.</p>
+    </div>
+    
+    <aside class="article-cta">
+      <strong>지금 진행 중인 청약 확인하기</strong>
+      <p>청약홈 공공데이터를 바탕으로 매일 갱신되는 일정은 우아하우스 청약정보에서 볼 수 있습니다.</p>
+      <a href="https://wooaaptpass.wooahouse.com/list.html" target="_blank" rel="noopener">청약목록</a> <a href="https://wooaaptpass.wooahouse.com/calendar.html" target="_blank" rel="noopener">청약 캘린더</a> <a href="https://wooaaptpass.wooahouse.com/residual.html" target="_blank" rel="noopener">무순위 청약</a> 
+    </aside>
+    
+    <p class="article-note">※ 청약 제도의 기준(소득·자산·점수 등)은 자주 개정됩니다. 신청 전에는 반드시 해당 단지의 입주자모집공고문과 <a href="https://www.applyhome.co.kr" target="_blank" rel="noopener">청약홈</a>의 최신 안내를 확인하세요.</p>
+  </article>
+  
+  <section class="related">
+    <h2>함께 읽어보세요</h2>
+    <ul>
+      <li><a href="/blog/youth-special-supply.html">청년 대상 특별공급과 우선공급 개념 — 나이 요건, 소득 기준, 임대·분양 유형 구분</a></li><li><a href="/blog/subscription-info-routine.html">청약 정보를 놓치지 않는 루틴 — 알림 설정, 일정 관리, 주간 점검 체크리스트</a></li><li><a href="/blog/spouse-subscription-strategy.html">부부가 청약할 때 알아야 할 것 — 세대 단위 신청, 중복 신청 제한, 명의 선택 전략</a></li><li><a href="/blog/smart-home-features-check.html">스마트홈 기능 확인 가이드 — 월패드, IoT 제어, 보안 기능 비교와 유지 비용</a></li>
+    </ul>
+  </section>
+  
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>aptpass.kr — 청약 가이드</p>
+      <p class="footer-links">
+        <a href="/about.html">소개</a>
+        <span>|</span>
+        <a href="/contact.html">문의</a>
+        <span>|</span>
+        <a href="/privacy.html">개인정보처리방침</a>
+      </p>
+      <p class="footer-note">본 사이트의 글은 일반적인 정보 제공을 위한 것이며, 청약 신청 전 반드시 청약홈 공식 사이트와 입주자모집공고문을 확인하세요.</p>
+    </div>
+  </footer>
+</body>
+</html>
